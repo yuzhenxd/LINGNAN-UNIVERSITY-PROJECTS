@@ -6,11 +6,21 @@
 
 | 文件夹 | 说明 |
 |--------|------|
-| [tip-calculator-cursor-activity](./tip-calculator-cursor-activity/) | Getting to Know Cursor 练习：小费计算器网页 |
+| [cursor-activities](./cursor-activities/) | Cursor 课堂练习（按活动分子文件夹） |
+| [tip-calculator](./cursor-activities/tip-calculator/) | Getting to Know Cursor 练习：小费计算器网页 |
+
+## 目录结构
+
+```text
+CDS-703/
+├── README.md
+└── cursor-activities/
+    └── tip-calculator/
+        ├── index.html
+        ├── script.js
+        └── Reflection.pdf
+```
 
 ## 命名建议
 
-后续作业可新建文件夹，例如：
-
-- `assignment-2-主题名`
-- `2026-11-03-lab-name`
+后续练习可在 `cursor-activities/` 下新建子文件夹，例如 `cursor-activities/assignment-2-主题名/`。
