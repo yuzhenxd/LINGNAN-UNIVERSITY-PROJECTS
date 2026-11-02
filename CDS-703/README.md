@@ -20,7 +20,3 @@ CDS-703/
         ├── script.js
         └── Reflection.pdf
 ```
-
-## 命名建议
-
-后续练习可在 `cursor-activities/` 下新建子文件夹，例如 `cursor-activities/assignment-2-主题名/`。
