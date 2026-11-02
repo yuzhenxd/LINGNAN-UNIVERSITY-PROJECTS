@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        background: linear-gradient(160deg, #eef2ff 0%, #f8fafc 45%, #e0f2fe 100%);
+        color: #0f172a;
+        padding: 1.5rem;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 420px;
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+        padding: 2rem 1.75rem;
+      }
+
+      h1 {
+        margin: 0 0 1.5rem;
+        font-size: 1.75rem;
+        text-align: center;
+        letter-spacing: -0.02em;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.35rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #334155;
+      }
+
+      input,
+      select,
+      button {
+        width: 100%;
+        font: inherit;
+        margin-bottom: 1rem;
+      }
+
+      input,
+      select {
+        padding: 0.65rem 0.75rem;
+        border: 1px solid #cbd5e1;
+        border-radius: 10px;
+        background: #f8fafc;
+      }
+
+      input:focus,
+      select:focus {
+        outline: 2px solid #6366f1;
+        border-color: #6366f1;
+      }
+
+      button {
+        padding: 0.75rem 1rem;
+        border: none;
+        border-radius: 10px;
+        background: #4f46e5;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+      }
+
+      button:hover {
+        background: #4338ca;
+      }
+
+      #result {
+        margin-top: 0.75rem;
+        padding: 1rem;
+        border-radius: 10px;
+        background: #f1f5f9;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        min-height: 3rem;
+      }
+
+      #result.error {
+        background: #fef2f2;
+        color: #b91c1c;
+        border: 1px solid #fecaca;
+      }
+
+      #result.success {
+        background: #ecfdf5;
+        color: #065f46;
+        border: 1px solid #a7f3d0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- input for bill amount, dropdown for tip percent 10 15 20, number of people, a Calculate button, and a result area -->
+    <main class="card">
+      <h1>Tip Calculator</h1>
+
+      <label for="bill">Bill amount ($)</label>
+      <input id="bill" type="number" min="0" step="0.01" placeholder="e.g. 80.00" />
+
+      <label for="tip-percent">Tip percentage</label>
+      <select id="tip-percent">
+        <option value="10">10%</option>
+        <option value="15" selected>15%</option>
+        <option value="20">20%</option>
+      </select>
+
+      <label for="people">Number of people</label>
+      <input id="people" type="number" min="1" step="1" placeholder="e.g. 3" />
+
+      <button id="calculate" type="button">Calculate</button>
+
+      <div id="result" aria-live="polite">Enter values and click Calculate.</div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
